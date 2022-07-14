@@ -2,4 +2,5 @@
 <h2>The topics list:</h2>
 <ul>
   <li>Comparable and Comporator</li>
+   <li>Generics</li>
 </ul>
