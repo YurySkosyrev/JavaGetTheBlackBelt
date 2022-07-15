@@ -16,13 +16,13 @@ public class ParametrizedMethod {
         stringList.add("1");
         stringList.add("2");
         stringList.add("3");
-        String stringValue = GenMethod.getSecondElement(stringList);
-        System.out.println(stringValue);
+//        String stringValue = GenMethod.getSecondElement(stringList);
+//        System.out.println(stringValue);
     }
 }
 
 class GenMethod{
-    public static <T> T getSecondElement(List<T> list){
+    public static <T extends Number> T getSecondElement(List<T> list){
         return list.get(1);
     }
 }
