@@ -1,8 +1,7 @@
-package com.javacourse.collection.binarysearch;
+package com.javacourse.collection.list.binarysearch;
 
-import com.javacourse.collection.arraylist.Student;
+import com.javacourse.collection.list.arraylist.Student;
 
-import java.sql.Array;
 import java.util.*;
 
 public class BinarySearch {

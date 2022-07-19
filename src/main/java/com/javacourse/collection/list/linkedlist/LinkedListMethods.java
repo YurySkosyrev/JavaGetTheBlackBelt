@@ -1,6 +1,6 @@
-package com.javacourse.collection.linkedlist;
+package com.javacourse.collection.list.linkedlist;
 
-import com.javacourse.collection.arraylist.Student;
+import com.javacourse.collection.list.arraylist.Student;
 
 import java.util.LinkedList;
 
