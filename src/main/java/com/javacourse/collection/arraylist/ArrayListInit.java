@@ -2,7 +2,7 @@ package com.javacourse.collection.arraylist;
 
 import java.util.ArrayList;
 
-public class ArrayInit {
+public class ArrayListInit {
     public static void main(String[] args) {
 
         ArrayList<String> arrayList1 = new ArrayList<String>();

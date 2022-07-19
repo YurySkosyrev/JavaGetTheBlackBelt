@@ -2,7 +2,7 @@ package com.javacourse.collection.arraylist;
 
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private String name;
     private String group;
 
@@ -25,5 +25,14 @@ public class Student {
                 "name='" + name + '\'' +
                 ", group='" + group + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Student anotherStudent) {
+        int result = this.group.compareTo(anotherStudent.group);
+        if (result == 0){
+            result = this.name.compareTo(anotherStudent.name);
+        }
+        return result;
     }
 }

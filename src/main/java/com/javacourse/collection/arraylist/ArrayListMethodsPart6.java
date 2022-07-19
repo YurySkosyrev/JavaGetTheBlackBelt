@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ArrayListMethodsPart6 {
     public static void main(String[] args) {
-        List<Integer> integerList = List.of(2,4,5);
+        List<Integer> integerList = List.of(2,4,5); // cannot contain null
         
         System.out.println(integerList);
 
@@ -17,7 +17,7 @@ public class ArrayListMethodsPart6 {
         arrayList1.add("Slava");
         arrayList1.add("Yury");
 
-        List<String> stringList = List.copyOf(arrayList1);
+        List<String> stringList = List.copyOf(arrayList1); // cannot contain null
 
         System.out.println("ArrayList: " + arrayList1);
         System.out.println("List: " + stringList);
