@@ -5,28 +5,28 @@ import java.util.ArrayList;
 public class ArrayListMethodsPart2 {
 
     public static void main(String[] args) {
-        Student st1 = new Student("Yury", "08-103");
-        Student st2 = new Student("Slava", "08-103");
-        Student st3 = new Student("Sergey", "08-103");
-        Student st4 = new Student("Dmitriy", "08-103");
+        StudentArr st1 = new StudentArr("Yury", "08-103");
+        StudentArr st2 = new StudentArr("Slava", "08-103");
+        StudentArr st3 = new StudentArr("Sergey", "08-103");
+        StudentArr st4 = new StudentArr("Dmitriy", "08-103");
 
-        ArrayList<Student> students = new ArrayList<>();
-        students.add(st1);
-        students.add(st2);
-        students.add(st3);
-        students.add(st4);
+        ArrayList<StudentArr> studentArrs = new ArrayList<>();
+        studentArrs.add(st1);
+        studentArrs.add(st2);
+        studentArrs.add(st3);
+        studentArrs.add(st4);
 
-        System.out.println(students);
+        System.out.println(studentArrs);
 
-        Student st5 = new Student("Dmitriy", "08-103");
-        students.remove(st5); // True with override method equals in class Student
+        StudentArr st5 = new StudentArr("Dmitriy", "08-103");
+        studentArrs.remove(st5); // True with override method equals in class Student
 
-        System.out.println(students);
+        System.out.println(studentArrs);
 
-        Student st6 = new Student("Sergey", "08-103");
-        System.out.println(students.indexOf(st6)); // True with override method equals in class Student
+        StudentArr st6 = new StudentArr("Sergey", "08-103");
+        System.out.println(studentArrs.indexOf(st6)); // True with override method equals in class Student
 
-        System.out.println("studentsList contains st6: " + students.contains(st6));
+        System.out.println("studentsList contains st6: " + studentArrs.contains(st6));
 
     }
 }

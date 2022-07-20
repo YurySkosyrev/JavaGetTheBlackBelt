@@ -2,11 +2,11 @@ package com.javacourse.collection.list.arraylist;
 
 import java.util.Objects;
 
-public class Student implements Comparable<Student> {
+public class StudentArr implements Comparable<StudentArr> {
     private String name;
     private String group;
 
-    public Student(String name, String group) {
+    public StudentArr(String name, String group) {
         this.name = name;
         this.group = group;
     }
@@ -15,8 +15,8 @@ public class Student implements Comparable<Student> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return Objects.equals(name, student.name) && Objects.equals(group, student.group);
+        StudentArr studentArr = (StudentArr) o;
+        return Objects.equals(name, studentArr.name) && Objects.equals(group, studentArr.group);
     }
 
     @Override
@@ -28,10 +28,10 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
-    public int compareTo(Student anotherStudent) {
-        int result = this.group.compareTo(anotherStudent.group);
+    public int compareTo(StudentArr anotherStudentArr) {
+        int result = this.group.compareTo(anotherStudentArr.group);
         if (result == 0){
-            result = this.name.compareTo(anotherStudent.name);
+            result = this.name.compareTo(anotherStudentArr.name);
         }
         return result;
     }

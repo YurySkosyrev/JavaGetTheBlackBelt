@@ -1,6 +1,6 @@
 package com.javacourse.collection.list.binarysearch;
 
-import com.javacourse.collection.list.arraylist.Student;
+import com.javacourse.collection.list.arraylist.StudentArr;
 
 import java.util.*;
 
@@ -32,21 +32,21 @@ public class BinarySearch {
         Collections.shuffle(arrayList);
         System.out.println("Shuffle arrayList: " +  arrayList);
 
-        List<Student> students = new ArrayList<>();
+        List<StudentArr> studentArrs = new ArrayList<>();
 
-        Student st1 = new Student("Yury", "08-102");
-        Student st2 = new Student("Slava", "08-105");
-        Student st3 = new Student("Sergey", "08-101");
-        Student st4 = new Student("Dmitriy", "08-103");
+        StudentArr st1 = new StudentArr("Yury", "08-102");
+        StudentArr st2 = new StudentArr("Slava", "08-105");
+        StudentArr st3 = new StudentArr("Sergey", "08-101");
+        StudentArr st4 = new StudentArr("Dmitriy", "08-103");
 
-        students.add(st1);
-        students.add(st2);
-        students.add(st3);
-        students.add(st4);
+        studentArrs.add(st1);
+        studentArrs.add(st2);
+        studentArrs.add(st3);
+        studentArrs.add(st4);
 
 //      Class Student must implement Comparable interface
-        Collections.sort(students);
-        System.out.println(Collections.binarySearch(students, st3));
+        Collections.sort(studentArrs);
+        System.out.println(Collections.binarySearch(studentArrs, st3));
 
         int[] array = {1, 4, -2, 4, 23, -4, 5, 2};
         System.out.println(Arrays.toString(array));
