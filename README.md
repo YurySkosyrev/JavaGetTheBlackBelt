@@ -4,4 +4,5 @@
   <li>Comparable and Comporator</li>
    <li>Generics</li>
    <li>Collection</li>
+   <li>Nested classes</li>
 </ul>
