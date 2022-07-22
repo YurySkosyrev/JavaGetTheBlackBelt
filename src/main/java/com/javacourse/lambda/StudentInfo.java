@@ -1,6 +1,8 @@
 package com.javacourse.lambda;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class StudentInfo {
 
@@ -53,22 +55,47 @@ class Test{
         students.add(st4);
         students.add(st5);
 
+        Collections.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return  o1.course- o2.course;
+            }
+        });
+
+
+        Collections.sort(students, (s1, s2) -> (s1.course - s2.course));
+        System.out.println(students);
+
 
 
         StudentInfo info = new StudentInfo();
         info.testStudent(students, new CheckOverGrade());
-        System.out.println("--------------------------");
+
+//        Variable 's' is already defined in the scope
+//        int s= 1;
+
         info.testStudent(students, new StudentChecks() {
             @Override
             public boolean checkStudent(Student s) {
                 return s.age>20;
             }
         });
-        System.out.println("--------------------------");
+
         info.testStudent(students, (Student s) -> {return s.avgGrade>8;});
-        System.out.println("--------------------------");
-        info.testStudent(students, (Student s) -> {return s.age<30;});
-        System.out.println("--------------------------");
+
+        info.testStudent(students, (Student s) -> {
+            System.out.println("Hello");
+            return s.avgGrade>8;});
+
+        info.testStudent(students, s -> {return s.age<30;});
+
+        info.testStudent(students, (Student s) -> s.age<30);
+
+        info.testStudent(students, s -> s.age<30);
+
+        StudentChecks sc = s -> s.age<30;
+        info.testStudent(students, sc);
+
         info.testStudent(students, (Student s) -> {return s.age>19 && s.avgGrade<9.5 && s.sex=='f';});
 
 //        info.PrintStudentsOverGrade(students, 8);
