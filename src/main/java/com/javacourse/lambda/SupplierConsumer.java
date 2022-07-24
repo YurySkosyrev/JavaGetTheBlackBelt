@@ -17,6 +17,7 @@ public class SupplierConsumer {
         carConsumer.accept(car);
     }
 
+
     public static void main(String[] args) {
         ArrayList<Car> cars = createThreeCars(() -> new Car("BMW", "red", 300));
         System.out.println(cars);

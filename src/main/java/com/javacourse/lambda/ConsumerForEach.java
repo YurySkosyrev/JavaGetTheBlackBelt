@@ -2,7 +2,7 @@ package com.javacourse.lambda;
 
 import java.util.ArrayList;
 
-public class ForEach {
+public class ConsumerForEach {
     public static void main(String[] args) {
         ArrayList<Integer> al = new ArrayList<>();
         al.add(1);

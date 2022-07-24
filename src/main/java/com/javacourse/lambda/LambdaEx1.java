@@ -4,16 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class StudentInfo {
+public class LambdaEx1 {
 
-    public void testStudent(ArrayList<Student> al, StudentChecks sc){
-        for(Student s : al){
-            if (sc.checkStudent(s)){
-                System.out.println(s);
-            }
-        }
-    }
-
+//***************************************************************************************//
+//
 //    public void PrintStudentsOverGrade(ArrayList<Student> al, double grade){
 //        for(Student s : al){
 //            if (s.avgGrade>grade){
@@ -37,10 +31,20 @@ public class StudentInfo {
 //            }
 //        }
 //    }
+//
+//***************************************************************************************//
 
+
+    public void testStudent(ArrayList<Student> al, StudentChecks sc){
+        for(Student s : al){
+            if (sc.checkStudent(s)){
+                System.out.println(s);
+            }
+        }
+    }
 }
 
-class Test{
+class TestLambda{
     public static void main(String[] args) {
         Student st1 = new Student("Ivan", 'm',22,3,8.3);
         Student st2 = new Student("Nikolay", 'm',28,2,6.4);
@@ -55,20 +59,17 @@ class Test{
         students.add(st4);
         students.add(st5);
 
-        Collections.sort(students, new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                return  o1.course- o2.course;
-            }
-        });
 
+//***************************************************************************************//
+//
+//        info.PrintStudentsOverGrade(students, 8);
+//        info.PrintStudentsUnderAge(students, 30);
+//        info.PrintStudentsMix(students, 19, 9.5, 'f');
+//
+//***************************************************************************************//
 
-        Collections.sort(students, (s1, s2) -> (s1.course - s2.course));
-        System.out.println(students);
+        LambdaEx1 info = new LambdaEx1();
 
-
-
-        StudentInfo info = new StudentInfo();
         info.testStudent(students, new CheckOverGrade());
 
 //        Variable 's' is already defined in the scope
@@ -80,6 +81,8 @@ class Test{
                 return s.age>20;
             }
         });
+
+//***************************************************************************************//
 
         info.testStudent(students, (Student s) -> {return s.avgGrade>8;});
 
@@ -98,19 +101,25 @@ class Test{
 
         info.testStudent(students, (Student s) -> {return s.age>19 && s.avgGrade<9.5 && s.sex=='f';});
 
-//        info.PrintStudentsOverGrade(students, 8);
-//        info.PrintStudentsUnderAge(students, 30);
-//        info.PrintStudentsMix(students, 19, 9.5, 'f');
+//***************************************************************************************//
+
+        Collections.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return  o1.course- o2.course;
+            }
+        });
+
+
+        Collections.sort(students, (s1, s2) -> (s1.course - s2.course));
+        System.out.println(students);
 
     }
 }
 
+//  Functional interface must have one abstract method
 interface StudentChecks{
     boolean checkStudent(Student s);
-
-//    Can be only one abstract method
-//    boolean checkStudent1(Student s);
-
 }
 
 class CheckOverGrade implements StudentChecks {

@@ -1,6 +1,6 @@
 package com.javacourse.lambda;
 
-public class LambdaEx {
+public class LambdaEx2 {
 
     static void method1(I1 i1){
         System.out.println(i1.stringOp("Privet"));
@@ -17,11 +17,14 @@ public class LambdaEx {
         method1((String str) -> {
             int lambdaInnerVar =1;
             return str.length() + outerVar;});
-        method2(() -> 18);
-
 
 //        Cannot resolve symbol
 //        System.out.println(lambdaInnerVar);
+
+//***************************************************************************************//
+
+        method2(() -> 18);
+
     }
 }
 

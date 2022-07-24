@@ -3,7 +3,7 @@ package com.javacourse.lambda;
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
-public class RemoveIf {
+public class PredicateRemoveIf {
     public static void main(String[] args) {
         ArrayList<String> al = new ArrayList<>();
         al.add("Privet");
