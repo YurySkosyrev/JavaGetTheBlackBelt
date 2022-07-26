@@ -102,6 +102,45 @@ public class StreamsMethods2 {
         Student maxSt = students.stream().max((x,y)->x.getCourse()-y.getCourse()).get();
         System.out.println(maxSt);
 
+//***************************************************************************************//
+//limit, skip
+        System.out.println();
+
+        System.out.println("Full list:");
+        students.stream().filter(e -> e.getCourse()>1).forEach(System.out::println);
+        System.out.println("Limit list:");
+        students.stream().filter(e -> e.getCourse()>1).limit(2).forEach(System.out::println);
+        System.out.println("Skip list:");
+        students.stream().filter(e -> e.getCourse()>1).skip(2).forEach(System.out::println);
+
+//***************************************************************************************//
+//limit, skip
+        System.out.println();
+
+        System.out.println("Full list:");
+        students.stream().filter(e -> e.getCourse()>1).forEach(System.out::println);
+        System.out.println("Limit list:");
+        students.stream().filter(e -> e.getCourse()>1).limit(2).forEach(System.out::println);
+        System.out.println("Skip list:");
+        students.stream().filter(e -> e.getCourse()>1).skip(2).forEach(System.out::println);
+
+//***************************************************************************************//
+//mapToInt
+        System.out.println();
+
+        List <Integer> courses = students.stream().mapToInt(e->e.getCourse())
+                        .boxed().collect(Collectors.toList());
+        System.out.println(courses);
+
+        int sum = students.stream().mapToInt(e-> e.getCourse()).sum();
+        System.out.println("Sum of courses: " + sum);
+
+        double average = students.stream().mapToInt(e-> e.getCourse()).average().getAsDouble();
+        System.out.println("Average courses: " + average);
+
+        int min = students.stream().mapToInt(e-> e.getCourse()).min().getAsInt();
+        System.out.println("Min of courses: " + min);
+
     }
 }
 
