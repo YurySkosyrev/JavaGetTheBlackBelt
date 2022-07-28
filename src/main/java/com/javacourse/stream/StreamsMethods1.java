@@ -22,7 +22,7 @@ public class StreamsMethods1 {
         System.out.println(multiply);
 
 //***************************************************************************************//
-
+//reduce
         int summ = list.stream().reduce(0,(accumulator,element) -> accumulator+=element);
         System.out.println(summ);
 
