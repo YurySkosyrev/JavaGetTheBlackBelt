@@ -9,7 +9,7 @@ public class ThreadInit3 implements Runnable{
     }
 
     public static void main(String[] args) {
-        ThreadInit2 myThread = new ThreadInit2();
+        Thread myThread = new Thread(new ThreadInit3());
         myThread.start();
 
         for(int i=1000; i>0; i--){
