@@ -31,6 +31,20 @@ public class ChannelBufferEx1 {
 
             System.out.println(result);
 
+            String addText = "\nTwo roads diverged in a yellow wood,\n" +
+                    "And sorry I could not travel both\n" +
+                    "And be one traveler, long I stood\n" +
+                    "And looked down one as far as I could\n" +
+                    "To where it bent in the undergrowth.";
+
+            ByteBuffer buffer1 = ByteBuffer.wrap(addText.getBytes());
+            channel.write(buffer1);
+
+//            ByteBuffer buffer2 = ByteBuffer.allocate(addText.getBytes().length);
+//            buffer2.put(addText.getBytes());
+//            buffer2.flip();
+//            channel.write(buffer2);
+
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
