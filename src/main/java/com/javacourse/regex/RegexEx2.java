@@ -2,7 +2,7 @@ package com.javacourse.regex;
 
 import java.util.Arrays;
 
-public class RegexEX2 {
+public class RegexEx2 {
     public static void main(String[] args) {
         String s1 = "abcd abct abcf abc";
         String s2 = "ac";
