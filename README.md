@@ -8,4 +8,7 @@
   <li>Lambda expressions</li>
   <li>Streams API</li>
   <li>Multithreading</li>
+  <li>IO and NIO</li>
+  <li>RegEx</li>
+  <li>Annotations</li>
 </ul>
