@@ -29,7 +29,11 @@ public class RegexEx1 {
 //        String patternString = "\\w{4}";
 //        String patternString = "\\W{3}";
 //        String patternString = "\\w{5}\\s\\w{4}";
-        String patternString = "\\w{2}\\S{2}\\w{3}";
+//        String patternString = "\\w{2}\\S{2}\\w{3}";
+//        String patternString = "\\Aaabc";
+        String patternString = "=+\\Z";
+
+
 
         Pattern pattern = Pattern.compile(patternString);
         Matcher matcher = pattern.matcher(string);
