@@ -1,9 +1,6 @@
 package com.javacourse.reflection;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Member;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 import java.util.Arrays;
 
 public class Ex1 {
@@ -67,6 +64,24 @@ public class Ex1 {
                         + " parameter types = "
                         + Arrays.toString(method.getParameterTypes()));
             }
+        }
+
+        Constructor constructor1 = employeeClass.getConstructor();
+        System.out.println("Constructor has " + constructor1.getParameterCount() +
+                " parameters, their types are " + Arrays.toString(constructor1.getParameterTypes()));
+        Constructor constructor2 = employeeClass.getConstructor(int.class, String.class, String.class);
+        System.out.println("Constructor has " + constructor2.getParameterCount() +
+                " parameters, their types are " + Arrays.toString(constructor2.getParameterTypes()));
+        Constructor constructor3 = employeeClass.getConstructor(int.class, String.class, String.class, double.class);
+        System.out.println("Constructor has " + constructor3.getParameterCount() +
+                " parameters, their types are " + Arrays.toString(constructor3.getParameterTypes()));
+
+        System.out.println("---------------------------------------");
+
+        Constructor[] constructors = employeeClass.getConstructors();
+        for (Constructor constructor : constructors){
+            System.out.println(constructor.getName() + " has " + constructor.getParameterCount() +
+                    " parameters, their types are " + Arrays.toString(constructor.getParameterTypes()));
         }
     }
 }
