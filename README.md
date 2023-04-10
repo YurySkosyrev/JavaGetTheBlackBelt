@@ -1,4 +1,5 @@
 <h1>Java - get the black belt! (Udemy course)</h1>
+Практика курса по Java https://www.udemy.com/course/java-ot-zaura/
 <h2>The topics list:</h2>
 <ul>
   <li>Comparable and Comporator</li>
